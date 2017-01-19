@@ -1,0 +1,149 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+/* universal styling */
+$insta-navy: #125688;
+$light-grey: #eeefef;
+
+body {
+  background-color: #fafafa;
+  font-family: proxima-nova, 'Helvetica Neue', Arial,
+  Helvetica, sans-serif;
+}
+
+/* navbar styling */
+
+.navbar-brand {
+  a {
+    color: $insta-navy;
+  }
+}
+
+.navbar-default {
+  background-color: #fff;
+  height: 54px;
+  .navbar-nav li a {
+    color: $insta-navy;
+  }
+}
+
+.navbar-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* posts styling */
+
+.posts-wrapper {
+  padding-top: 40px;
+  margin: 0 auto;
+  max-width: 642px;
+  width: 100%
+}
+
+.post {
+  background-color: #fff;
+  border-color: #edeeee;
+  border-style: solid;
+  border-radius: 3px;
+  border-width: 1px;
+  margin-bottom: 60px;
+  .post-head {
+    flex-direction: row;
+    height: 64px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 24px;
+    color: $insta-navy;
+    font-size: 15px;
+    line-height: 18px;
+    .user-name, .time-ago {
+      display: inline;
+    }
+    .user-name {
+      font-weight: 500;
+    }
+    .time-ago {
+      color: #A5A7AA;
+      float: right;
+    }
+  }
+  .image {
+  border-bottom: 1px solid $light-grey;
+  border-top: 1px solid $light-grey;
+  }
+}
+
+.post-bottom {
+  .user-name, .comment-content {
+    display: inline;
+  }
+  .caption {
+    margin-bottom: 7px;
+  }
+  .user-name {
+    font-weight: 500;
+    margin-right: 0.3em;
+    color: $insta-navy;
+    font-size: 15px;
+  }
+  .user-name, .caption-content {
+    display: inline;
+  }
+  #comment {
+    margin-top: 7px;
+    .user-name {
+      font-weight: 500;
+      margin-right: 0.3em;
+    }
+    .delete-comment {
+      float: right;
+      color: #515151;
+    }
+  }
+  margin-bottom: 7px;
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.comment-content {
+  font-size: 15px;
+  line-height: 18px;
+  border: medium none;
+  width: 100%;
+  color: #4B4F54;
+}
+
+.comment-like-form {
+  padding-top: 24px;
+  margin-top: 13px;
+  margin-left: 24px;
+  margin-right: 24px;
+  min-height: 68px;
+  align-items: center;
+  border-top: 1px solid $light-grey;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Wrapper and styling for the new & edit view */
+
+
+.form-wrapper {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 40px;
+  border: 1px solid $light-grey;
+  border-radius: 3px;
+  width: 60%;
+}
+
+.edit-links {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
