@@ -7,12 +7,12 @@
 
   <body>
     <%= render 'layouts/header' %>
-    <div class="container">
+    <!-- <div class="container"> -->
       <% flash.each do |message_type, message| %>
         <%= content_tag :div, message, class: [:alert, alert_for(message_type)] %>
       <% end %>
       <%= yield %>
-      <%= debug(params) if Rails.env.development? %>
-    </div>
+      <%# debug(params) if Rails.env.development? %>
+    <!-- </div> -->
   </body>
 </html>

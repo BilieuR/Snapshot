@@ -19,4 +19,12 @@ module ApplicationHelper
       notice: 'alert-info'
     }[flash_type.to_sym] || flash_type.to_s
   end
+
+  # Determines if the post is an image or not
+  def form_image_select(post)
+    return image_tag post.image.url(:medium),
+                     id: 'image-preview',
+                     class: 'img-responsive' if post.image.exists?
+    image_tag 'placeholder.png', id: 'image-preview', class: 'img-responsive'
+  end
 end
