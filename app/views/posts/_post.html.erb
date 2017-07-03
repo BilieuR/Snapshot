@@ -33,14 +33,6 @@
             <%= render post.comments.last(4), post: post %>
           <% end %>
         </div>
-
-      <% if post.comments %>
-        <% post.comments.each do |comment| %>
-          <div class="comment">
-           <%= render post.comments, post: post %>
-          </div>
-        <% end %>
-      <% end %>
       </div>
     </div>
 
