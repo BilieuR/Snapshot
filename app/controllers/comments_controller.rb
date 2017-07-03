@@ -1,5 +1,14 @@
 class CommentsController < ApplicationController
-  before_action :set_post
+  before_action :find_post
+
+  def index
+    @comments = @post.comments.order("created_at ASC")
+
+    respond_to do |format|
+      format.html { render layout: !request.xhr? }
+    end
+  end
+
 
   def create
     @comment = @post.comments.build(comment_params)
@@ -16,6 +25,7 @@ class CommentsController < ApplicationController
     end
   end
 
+
   def destroy
     @comment = @post.comments.find(params[:id])
 
@@ -30,11 +40,12 @@ class CommentsController < ApplicationController
 
 
   private
+
     def comment_params
       params.require(:comment).permit(:content)
     end
 
-    def set_post
+    def find_post
       @post = Post.find(params[:post_id])
     end
 end

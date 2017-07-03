@@ -1,14 +1,13 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :find_post, only: [:show, :edit, :update, :destroy]
   before_action :owned_post, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order('created_at DESC').page(params[:page]).per(3)
   end
 
   def show
-    set_post
   end
 
   def new
@@ -28,11 +27,9 @@ class PostsController < ApplicationController
   end
 
   def edit
-    set_post
   end
 
   def update
-    set_post
     if @post.update(post_params)
       flash[:success] = "Post updated."
       redirect_to posts_path
@@ -43,7 +40,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    set_post
     @post.destroy
     redirect_to root_path
   end
@@ -54,7 +50,7 @@ class PostsController < ApplicationController
       params.require(:post).permit(:image, :caption)
     end
 
-    def set_post
+    def find_post
       @post = Post.find(params[:id])
     end
 

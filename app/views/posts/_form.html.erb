@@ -1,4 +1,4 @@
-<div class="posts-wrapper row">
+<div class="posts-wrapper">
   <div class="post">
     <div class="post-body">
       <div class="image-wrap">
@@ -12,8 +12,8 @@
           <div class="container-fluid">
             <div class="form-group text-center">
               <h4> Upload an image (this is required):</h4>
-              <%= f.file_field :image, label: false, input_html: {
-                onchange: "loadFile(event)" } %>
+              <%= f.input :image, label: false, input_html: {
+                onChange: 'loadFile(event)' } %>
             </div>
 
             <div class="form-group text-center">

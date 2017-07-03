@@ -114,9 +114,9 @@ body {
 .comment-content {
   font-size: 15px;
   line-height: 18px;
-  border: medium none;
   width: 100%;
   color: #4B4F54;
+  border: medium none;
 }
 
 .comment-like-form {
@@ -133,7 +133,6 @@ body {
 
 /* Wrapper and styling for the new & edit view */
 
-
 .form-wrapper {
   background-color: #fff;
   margin: 20px auto;
@@ -149,7 +148,6 @@ body {
 }
 
 /* Signup & Login form styling */
-
 
 html {
   height: 100%;
@@ -225,3 +223,44 @@ body#login-bg {
   padding: 1em;
   margin: 0px auto;
 }
+
+/* Index styling */
+
+#paginator {
+  color: #4090DB;
+  height: 120px;
+  width: 120px;
+  margin: 60px auto 40px;
+  position: relative;
+  display: table;
+  border: 2px solid #4090DB;
+  border-radius: 50%;
+  :hover {
+    border: 1px solid #2D6DA8;
+    border-radius: 50%;
+  }
+}
+
+#load_more {
+  display: table-cell;
+  font-size: 12px;
+  padding: 0px 9px;
+  vertical-align: middle;
+  text-decoration: none;
+  a :hover {
+    color: #2D6DA8;
+  }
+}
+
+.comments {
+  .paginator {
+    margin: 0.5em;
+    .more-comments {
+      color: #A5A7AA;
+    }
+  }
+}
+
+// input.comment_content {
+//   border: medium none;
+// }
