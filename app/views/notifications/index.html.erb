@@ -6,6 +6,9 @@
           <%= render 'notification', notification: notification %>
         <% end %>
       </ul>
+      <div class="text-center">
+        <%= paginate @notifications %>
+      </div>
     </div>
   </div>
 </div>

@@ -1,7 +1,7 @@
 class NotificationsController < ApplicationController
 
   def index
-    @notifications = current_user.notifications
+    @notifications = current_user.notifications.all.order('created_at DESC').page(params[:page]).per(10)
   end
 
   def link_through
