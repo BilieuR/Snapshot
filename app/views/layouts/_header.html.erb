@@ -13,6 +13,7 @@
     <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
+        <li><%= render 'notifications/notification_dropdown' %></li>
         <li><%= link_to "New Post", new_post_path %></li>
         <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
       <% else %>

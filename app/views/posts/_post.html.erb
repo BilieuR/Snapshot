@@ -50,7 +50,7 @@
       </div>
 
       <div class="comment-form col-sm-11">
-        <%= form_for [post, post.comments.build], remote: true do |f| %>
+        <%= form_for([post, post.comments.build], remote: true) do |f| %>
           <%= f.text_field :content, placeholder: 'Add a comment...', class: "comment-content", id: "comment_content_#{post.id}" %>
         <% end %>
       </div>

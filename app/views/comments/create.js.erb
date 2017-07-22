@@ -1,3 +1,4 @@
-$('#comments_<%= @post.id %>').append("<%= escape_javascript(render 'comments/comment', post: @post, comment: @comment) %>");
+$('#comments_<%= @post.id %>').append("<%= escape_javascript(render 'comment', post: @post, comment: @comment) %>");
 $('#comment_content_<%= @post.id %>').val('')
+
 

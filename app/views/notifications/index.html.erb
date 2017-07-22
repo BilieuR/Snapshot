@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <ul class="notification-index-list">
+        <% @notifications.each do |notification| %>
+          <%= render 'notification', notification: notification %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
