@@ -1,3 +1,11 @@
 <li>
   <%= link_to "#{notification.notified_by.user_name} has #{notification.notice_type}ed on your post", link_through_path(notification) %>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  <span class="notification-time-ago">
+    ⟶
+    &nbsp;
+    <%= "#{time_ago_in_words(notification.created_at)}" %>
+  </span>
 </li>

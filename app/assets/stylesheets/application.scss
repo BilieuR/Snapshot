@@ -315,7 +315,7 @@ body#login-bg {
   color: red;
 }
 
-.like-button a:hover, a:focus {
+.like-button a:hover, .like-button a:focus {
   text-decoration: none;
   color: red;
 }
@@ -335,4 +335,8 @@ body#login-bg {
     background-color: white;
     padding: 1em;
   }
+}
+
+.notification-time-ago {
+  color: #A5A7AA;
 }
