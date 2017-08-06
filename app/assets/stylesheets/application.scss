@@ -20,6 +20,10 @@ body {
   }
 }
 
+.glyphicon.glyphicon-camera {
+  font-size: 20px;
+}
+
 .navbar-default {
   background-color: #fff;
   height: 54px;
@@ -340,3 +344,8 @@ body#login-bg {
 .notification-time-ago {
   color: #A5A7AA;
 }
+
+.navy-glyphicon {
+  color: $insta-navy;
+}
+

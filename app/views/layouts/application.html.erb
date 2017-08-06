@@ -11,6 +11,5 @@
         <%= content_tag :div, message, class: [:alert, alert_for(message_type)] %>
       <% end %>
       <%= yield %>
-      <%# debug(params) if Rails.env.development? %>
   </body>
 </html>
