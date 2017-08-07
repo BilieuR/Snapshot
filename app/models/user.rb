@@ -23,6 +23,15 @@ class User < ApplicationRecord
   has_many :followers, through: :follower_relationships, source: :follower
 
   has_many :following_relationships, foreign_key: :follower_id, class_name: 'Follow'
-  has_many :followers, through: :following_relationships, source: :following
+  has_many :following, through: :following_relationships, source: :following
 
+  # Follow a specific user
+  def follow(user_id)
+    following_relationships.create(following_id: user_id)
+  end
+
+  # Unfollow a specific user
+  def unfollow(user_id)
+    following_relationships.find_by(following_id: user_id).destroy
+  end
 end
