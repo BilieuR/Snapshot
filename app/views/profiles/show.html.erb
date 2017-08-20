@@ -23,9 +23,20 @@
       <p class="profile-bio">
         <%= @user.bio %>
       </p>
+      <br>
       <div class="user-statistics">
-        <p>
-          <%= pluralize @user.posts.count, 'post' %>
+        <p class="inline">
+          <strong><%= @user.posts.count %></strong>
+          <%= " post".pluralize(@user.posts.count) %>
+        </p>
+          &nbsp;&nbsp;&nbsp;
+        <p class="inline">
+          <strong><%= @user.followers.count %></strong>      
+          <%= " follower".pluralize(@user.followers.count) %>
+        </p>
+          &nbsp;&nbsp;&nbsp;
+        <p class="inline">
+          <strong><%= @user.following.count %></strong> following
         </p>
       </div>
     </div>

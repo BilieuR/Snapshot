@@ -16,5 +16,4 @@ class NotificationsController < ApplicationController
     @notification.update(read: true)
     redirect_to profile_path(notified_by.user_name)
   end
-  
 end

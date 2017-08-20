@@ -18,6 +18,7 @@ body {
   a {
     color: $insta-navy;
   }
+  font-size: 23px;
 }
 
 .glyphicon.glyphicon-camera {
@@ -393,3 +394,7 @@ hr.notif-margin {
   } 
 }
 
+p.inline {
+  display:inline;
+  font-size: 17px;
+}
