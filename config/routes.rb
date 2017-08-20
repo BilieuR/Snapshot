@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'notifications/:id/link_through', to:
   'notifications#link_through', as: :link_through
 
+  get 'notifications/:id/follow_link_through', to:
+  'notifications#follow_link_through', as: :follow_link_through
 
   resources :posts do
     resources :comments

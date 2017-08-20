@@ -1,8 +1,10 @@
 <li>
   <% if notification.notice_type == 'comment' %>
-    <%= link_to "#{notification.notified_by.user_name} has #{notification.notice_type}ed on your post", link_through_path(notification) %>
+    <%= link_to "#{notification.notified_by.user_name} #{notification.notice_type}ed on your post", link_through_path(notification) %>
+  <% elsif notification.notice_type == 'like' %>
+    <%= link_to "#{notification.notified_by.user_name} #{notification.notice_type}d your post", link_through_path(notification) %>
   <% else %>
-    <%= link_to "#{notification.notified_by.user_name} has #{notification.notice_type}d your post", link_through_path(notification) %>
+    <%= link_to "#{notification.notified_by.user_name} started #{notification.notice_type}ing you!", follow_link_through_path(notification)%>
   <% end %>
 
 

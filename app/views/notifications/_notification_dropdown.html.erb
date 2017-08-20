@@ -1,11 +1,15 @@
 <div class="dropdown notification-dropdown">
-  <button class="btn btn-default dropdown-toggle navy-glyphicon" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    <%= current_user.notifications.where(read: false).count %>
+  <button class="btn btn-default dropdown-toggle navy-glyphicon nav-link" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <% if current_user.notifications.where(read: false).count >= 1 %>
+      <%= current_user.notifications.where(read: false).count %>
+    <% end %>
     <span class="glyphicon glyphicon-flag"></span>
   </button>
 
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li class="dropdown-header text-center">Notifications</li>
+    <li class="dropdown-header text-center" id="notification-title">
+      Notifications
+    </li><hr class="notif-margin">
       <%= render current_user.notifications.order('created_at DESC').last(5) %>
     <li class="divider" role="separator">
       <li class="text-center">

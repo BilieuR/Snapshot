@@ -37,9 +37,4 @@ module ApplicationHelper
                                     class: 'img-responsive img-
     circle profile-image'
   end
-
-  # def current_user_is_following(current_user, following_id)
-  #   Follow.where(follower: current_user, following: following_id).empty?
-  #   # current_user.follower_relationships.where(following: following_id).empty?
-  # end
 end

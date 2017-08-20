@@ -36,6 +36,9 @@ gem 'jquery-turbolinks'
 # Use Acts As Votable for liking posts
 gem 'acts_as_votable', '~> 0.10.0'
 
+# fontawesome
+gem "font-awesome-rails"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

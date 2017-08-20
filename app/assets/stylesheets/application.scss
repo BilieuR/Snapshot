@@ -37,6 +37,10 @@ body {
   margin: 0 auto;
 }
 
+.navbar-nav > li {
+  font-size: 16px;
+}
+
 /* posts styling */
 
 .posts-wrapper {
@@ -324,6 +328,21 @@ body#login-bg {
   color: red;
 }
 
+// Notification no click action just hover feature
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; // remove the gap so it doesn't close
+}
+
+#notification-title {
+  color: #A5A7AA;
+  font-size: 15px;
+}
+
+hr.notif-margin {
+  margin: 10px;
+}
+
 .notification-dropdown {
   margin-top: 10px;
   button {
@@ -371,5 +390,6 @@ body#login-bg {
     border-color: #47821F;
     background-color: #47821F;
     color: white;
-} }
+  } 
+}
 
