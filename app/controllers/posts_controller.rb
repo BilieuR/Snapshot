@@ -6,7 +6,11 @@ class PostsController < ApplicationController
 
 
   def index
-    @posts = Post.all.order('created_at DESC').page(params[:page]).per(3)
+    @posts = Post.of_current_and_followed_users(current_user.following, current_user).order('created_at DESC').page(params[:page]) #.per(3)
+  end
+
+  def browse
+    @posts = Post.all.order('created_at DESC').page(params[:page]) #.per(10)
   end
 
   def show

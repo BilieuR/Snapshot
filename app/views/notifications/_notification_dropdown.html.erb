@@ -11,10 +11,8 @@
       Notifications
     </li><hr class="notif-margin">
       <%= render current_user.notifications.order('created_at DESC').last(5) %>
-    <li class="divider" role="separator">
-      <li class="text-center">
-        <%= link_to 'View All', notifications_path %>
-      </li>
+    <li class="text-center">
+      <%= link_to 'View All', notifications_path %>
     </li>
   </ul>
 </div>

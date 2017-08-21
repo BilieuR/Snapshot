@@ -28,6 +28,14 @@ module ApplicationHelper
     image_tag 'placeholder.png', id: 'image-preview', class: 'img-responsive'
   end
 
+  def post_user_avatar_select(user)
+    return image_tag user.avatar.url(:medium),
+                      id:'post_user_avatar',
+                      class:'img-responsive img-circle post_profile_image inline' if user.avatar.exists?
+    image_tag 'default-avatar.png', id:'post_user_avatar',
+                                    class:'img-responsive img-circle post_profile_image inline'
+  end
+
   def profile_avatar_select(user)
     return image_tag user.avatar.url(:medium),
                      id: 'image-preview',

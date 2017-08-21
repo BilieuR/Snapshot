@@ -1,3 +1,7 @@
+
+<div class="thumb-img text-center">
+  <%= post_user_avatar_select(notification.notified_by) %>
+</div>
 <li>
   <% if notification.notice_type == 'comment' %>
     <%= link_to "#{notification.notified_by.user_name} #{notification.notice_type}ed on your post", link_through_path(notification) %>
@@ -7,7 +11,6 @@
     <%= link_to "#{notification.notified_by.user_name} started #{notification.notice_type}ing you!", follow_link_through_path(notification)%>
   <% end %>
 
-
   &nbsp;&nbsp;&nbsp;&nbsp;
 
   <span class="notification-time-ago">
@@ -16,3 +19,4 @@
     <%= "#{time_ago_in_words(notification.created_at)}" %>
   </span>
 </li>
+<hr class="notif-margin">

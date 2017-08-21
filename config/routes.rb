@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root 'posts#index'
 
+  get 'explore', to: 'posts#browse', as: :browse_posts
 
   post ':user_name/follow_user', to: 'relationships#follow_user', as: :follow_user
 
